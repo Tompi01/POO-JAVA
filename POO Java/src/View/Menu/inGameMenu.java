@@ -9,14 +9,16 @@ public class inGameMenu {
     public static void menu()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Allez voir le marchand \r\n2 - Aller voir JeanCrampté \r\n3 - Quitter");
+        System.out.println("1 - Continuer vers la plaine \r\n2 - Allez voir le marchand \r\n3 - Quitter");
         try {
             int response = scanner.nextInt();
             switch (response){
                 case 1:
-                    UIMarchand.marchandMenu();
+                    System.out.println("Au loin vous voyez une damoiselle se faire violanter par un chevalier");
+                    plaineMenu.menu();
                     break;
                 case 2:
+                    UIMarchand.marchandMenu();
                     break;
                 case 3:
                     System.out.println("Quitter");

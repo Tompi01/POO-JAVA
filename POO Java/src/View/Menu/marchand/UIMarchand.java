@@ -21,7 +21,7 @@ public class UIMarchand {
                     UIMarchandVendre.vendreMenu();
                     break;
                 case 3:
-                    System.out.println("Quitter");
+                    System.out.println("Vous sortez de la boutique");
                     inGameMenu.menu();
                     break;
                 default:

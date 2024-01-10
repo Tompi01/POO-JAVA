@@ -1,30 +1,35 @@
-package View;
+package View.Menu;
 
-import View.Menu.inGameMenu;
+import View.Menu.combat.UICombat;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class cli {
-
-    public static void startMenu()
+public class JeanCramptéMenu {
+    public static void menu()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Jouer \r\n2 - Quitter");
+        System.out.println("1 - Vous battre contre le chevalier \r\n2 - Essayer de discuter avec lui \r\n3 - Partir");
         try {
             int response = scanner.nextInt();
             switch (response){
                 case 1:
-                    System.out.println("Vous arrivez près d'une étrange boutique");
-                    inGameMenu.menu();
+                    System.out.println("JeanCrampté veut se battre");
+                    UICombat.menu();
+                    break;
                 case 2:
+                    System.out.println("JeanCrampté n'est pas quelqu'un qui discute");
+                    UICombat.menu();
+                    break;
+                case 3:
                     System.out.println("Quitter");
+                    plaineMenu.menu();
                     break;
                 default:
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                     System.out.println("Invalide");
-                    startMenu();
+                    menu();
                     break;
             }
         } catch (InputMismatchException e)
@@ -32,7 +37,7 @@ public class cli {
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("Entrée invalide");
-            startMenu();
+            menu();
         }
     }
 }

@@ -1,37 +1,39 @@
-package View.Menu.marchand;
+package View.Menu.combat;
+
+import View.Menu.combat.Attack.magique;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class UIMarchandAchat {
-    public static void achatMenu(){
+public class UICombat {
+    public static void menu()
+    {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Potion de vitalité \r\n 2 - Potion de mana \r\n 3 - Épée en bois \r\n 4 - Bouclier en bois \r\n 5 - Quitter");
-
+        System.out.println("1 - Attaques physiques          2 - Attaques magiques \r\n3 - Utiliser un objet           4 - Fuir");
         try {
             int response = scanner.nextInt();
             switch (response){
                 case 1:
-                    System.out.println("Vous avez acheter une potion de vitalité");
+                    System.out.println("Attaques physiques");
+                    //Là on tape le mec en face
                     break;
                 case 2:
-                    System.out.println("Vous avez acheter une potion de mana");
+                    System.out.println("Attaques magiques");
+                    magique.menu();
                     break;
                 case 3:
-                    System.out.println("Vous avez acheter une épée en bois");
+                    System.out.println("Objets");
+                    UICombatItem.menu();
                     break;
                 case 4:
-                    System.out.println("Vous avez acheter un bouclier en bois");
-                    break;
-                case 5:
-                    //System.out.println("Quitter");
-                    UIMarchand.marchandMenu();
+                    System.out.println("Vous ne pouvez pas fuir");
+                    UICombat.menu();
                     break;
                 default:
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                     System.out.println("Invalide");
-                    UIMarchand.marchandMenu();
+                    menu();
                     break;
             }
         } catch (InputMismatchException e)
@@ -39,8 +41,7 @@ public class UIMarchandAchat {
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("Entrée invalide");
-            UIMarchand.marchandMenu();
+            menu();
         }
     }
 }
-
