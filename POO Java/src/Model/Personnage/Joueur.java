@@ -1,5 +1,8 @@
 package Model.Personnage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Joueur extends Personnage {
     int pointDeMana;
     String objetsEquipes;
@@ -47,5 +50,14 @@ public class Joueur extends Personnage {
 
     public void fuir(){
 
+    }
+
+    List<String> inventaire = new ArrayList<>();
+
+    public void inventaire(){
+        inventaire.add("");
+        inventaire.add("");
+        inventaire.add("");
+        inventaire.add("");
     }
 }
