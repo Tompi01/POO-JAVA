@@ -1,8 +1,6 @@
 package Model.Personnage;
 
-import Model.Interactable;
-
-import java.lang.annotation.Inherited;
+import Model.Interaction.Interactable;
 
 public abstract class Personnage implements Interactable {
     String nom;

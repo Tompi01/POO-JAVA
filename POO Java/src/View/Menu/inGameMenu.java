@@ -1,29 +1,31 @@
-package View;
+package View.Menu;
 
-import View.Menu.inGameMenu;
+import View.Menu.marchand.UIMarchand;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class cli {
-
-    public static void startMenu()
+public class inGameMenu {
+    public static void menu()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Jouer \r\n2 - Quitter");
+        System.out.println("1 - Allez voir le marchand \r\n2 - Aller voir JeanCrampté \r\n3 - Quitter");
         try {
             int response = scanner.nextInt();
             switch (response){
                 case 1:
-                    inGameMenu.menu();
+                    UIMarchand.marchandMenu();
+                    break;
                 case 2:
+                    break;
+                case 3:
                     System.out.println("Quitter");
                     break;
                 default:
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                     System.out.println("Invalide");
-                    startMenu();
+                    menu();
                     break;
             }
         } catch (InputMismatchException e)
@@ -31,7 +33,9 @@ public class cli {
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("Entrée invalide");
-            startMenu();
+            menu();
         }
     }
 }
+
+

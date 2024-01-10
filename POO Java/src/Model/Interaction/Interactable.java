@@ -1,4 +1,4 @@
-package Model;
+package Model.Interaction;
 
 public interface Interactable {
     public void utiliserObjet();
