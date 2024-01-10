@@ -2,11 +2,12 @@ package Model.Personnage;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import Model.Objet.EpeeCourte;
 public class Joueur extends Personnage {
     int pointDeMana;
     String objetsEquipes;
     int argent;
+    EpeeCourte epeeCourte = new EpeeCourte(1, "Epée", "Epée courte");
 
     public Joueur(String nom, int pointsDeVie, int force, int pointDeMana, String objetsEquipes) {
         super(nom, pointsDeVie, force);
@@ -52,12 +53,9 @@ public class Joueur extends Personnage {
 
     }
 
-    List<String> inventaire = new ArrayList<>();
+    List<Object> inventaire = new ArrayList<>();
 
     public void inventaire(){
-        inventaire.add("");
-        inventaire.add("");
-        inventaire.add("");
-        inventaire.add("");
+        inventaire.add(epeeCourte);
     }
 }
