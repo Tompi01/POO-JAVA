@@ -66,7 +66,12 @@ public class Joueur extends Personnage {
 
 
 
-    public void inventaire(){
+    public void setInventaireDepart(){
         inventaire.add(epeeCourte);
     }
+
+    public static void addInventaire(Object objet){
+        inventaire.add(objet);
+    }
 }
+
