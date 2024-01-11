@@ -1,7 +1,9 @@
 package View;
 
 import Model.Personnage.Joueur;
+import View.Menu.combat.UICombat;
 import View.Menu.inGameMenu;
+import View.Menu.personnageSelector;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -16,8 +18,8 @@ public class cli {
             int response = scanner.nextInt();
             switch (response){
                 case 1:
-                    System.out.println("Vous arrivez près d'une étrange boutique");
-                    inGameMenu.menu();
+                    System.out.println("Quelle personnage voulez vous jouez ?");
+                    personnageSelector.menu();
                 case 2:
                     System.out.println("Quitter");
                     break;
