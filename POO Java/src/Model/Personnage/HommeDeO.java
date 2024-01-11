@@ -1,8 +1,9 @@
 package Model.Personnage;
 
-public class HommedeO extends Personnage {
+public class HommeDeO extends Personnage {
 
     int energieAquatique;
+
     public void attaquer(){
 
     }
@@ -17,7 +18,7 @@ public class HommedeO extends Personnage {
     public void armureDeFlammes(){
         //Armure d'eau soignant le porteur après une attaque donnée
     }
-    public HommedeO(String nom, int pointsDeVie, int force, boolean estMort) {
+    public HommeDeO(String nom, int pointsDeVie, int force, boolean estMort) {
         super(nom, pointsDeVie, force, estMort);
     }
 
