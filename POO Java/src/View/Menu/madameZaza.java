@@ -18,6 +18,7 @@ public class madameZaza {
                     break;
                 case 2:
                     System.out.println("Merci pour ces magnifique écus d'or");
+                    
                     break;
                 case 3:
                     plaineMenu.menu();

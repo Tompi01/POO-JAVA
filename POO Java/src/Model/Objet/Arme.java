@@ -3,12 +3,11 @@ package Model.Objet;
 public class Arme extends Objet {
    public int pointsDeDegat;
     public String typeDarme;
-    public String nom;
 
-    public Arme(int pointsDeDegat, String typeDarme, String nom) {
+    public Arme(String nom, String categorieObjet, int prix, int pointsDeDegat, String typeDarme) {
+        super(nom, categorieObjet, prix);
         this.pointsDeDegat = pointsDeDegat;
         this.typeDarme = typeDarme;
-        this.nom = nom;
     }
 
     @Override

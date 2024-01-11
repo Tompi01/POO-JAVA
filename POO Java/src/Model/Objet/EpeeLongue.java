@@ -1,7 +1,7 @@
 package Model.Objet;
 
 public class EpeeLongue extends Arme{
-    public EpeeLongue(int pointsDeDegat, String typeDarme, String nom) {
-        super(pointsDeDegat, typeDarme, nom);
+    public EpeeLongue(String nom, String categorieObjet, int prix, int pointsDeDegat, String typeDarme) {
+        super(nom, categorieObjet, prix, pointsDeDegat, typeDarme);
     }
 }
