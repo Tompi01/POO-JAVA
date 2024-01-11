@@ -4,10 +4,24 @@ import Model.Personnage.Joueur;
 import Model.Personnage.Tristepin;
 
 public class Init {
-    public static void initialisation(){
-        Joueur me = new Joueur("MOI", 100, 20,100,"épée courte", false);
+
+
+    public static String classeStock;
+
+    public static Joueur initialisation(){
         Tristepin JeanCrampté = new Tristepin("JeanCrampté", 120, 10, false);
+        Joueur me = null;
+        if (classeStock == "tank"){
+            me = new Joueur("MOI", 160, 10,100,"épée courte", false);
+        } else if (classeStock == "combattant") {
+            me = new Joueur("MOI", 100, 20,100,"épée courte", false);
+        } else if (classeStock == "assassin") {
+            me = new Joueur("MOI", 60, 40,100,"épée courte", false);
+        }
+        return me;
     }
+
+
 
 
 }
