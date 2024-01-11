@@ -2,8 +2,19 @@ package Model.Objet;
 
 public class PotionDeMana extends Potion {
     int manaRendu;
-    public PotionDeMana(int pointsDeDegat, String typeDarme, String nom, int taille, int manaRendu) {
-        super(pointsDeDegat, typeDarme, nom, taille);
+
+    public PotionDeMana(String nom, String categorieObjet, int prix, int manaRendu) {
+        super(nom, categorieObjet, prix);
         this.manaRendu = manaRendu;
+    }
+
+    @Override
+    public void setPrix(int prix) {
+        super.setPrix(prix);
+    }
+
+    @Override
+    public int getPrix() {
+        return super.getPrix();
     }
 }

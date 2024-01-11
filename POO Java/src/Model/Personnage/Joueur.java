@@ -7,6 +7,18 @@ public class Joueur extends Personnage {
 
     public Joueur(String nom, int pointsDeVie, int force, int pointDeMana, String objetsEquipes, boolean estMort) {
         super(nom, pointsDeVie, force, estMort);
+
+    public void setArgent(int argent) {
+        this.argent = argent;
+    }
+
+    public static int getArgent() {
+        return argent;
+    }
+
+    EpeeCourte epeeCourte = new EpeeCourte(1, "Epée", "Epée courte");
+
+    List<Object> inventaire = new ArrayList<>();
         this.pointDeMana = pointDeMana;
         this.objetsEquipes = objetsEquipes;
     }
@@ -50,4 +62,12 @@ public class Joueur extends Personnage {
     }
 
 
+    public void setInventaireDepart(){
+        inventaire.add(epeeCourte);
+    }
+
+    public static void addInventaire(Object objet){
+        inventaire.add(objet);
+    }
 }
+

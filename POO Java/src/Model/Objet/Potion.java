@@ -1,11 +1,23 @@
 package Model.Objet;
 
-public class Potion extends Arme{
+public class Potion extends Objet{
 
-    int taille;
+    public Potion(String nom, String categorieObjet, int prix) {
+        super(nom, categorieObjet, prix);
+    }
 
-    public Potion(int pointsDeDegat, String typeDarme, String nom, int taille) {
-        super(pointsDeDegat, typeDarme, nom);
-        this.taille = taille;
+    @Override
+    public void setPrix(int prix) {
+        super.setPrix(prix);
+    }
+
+    @Override
+    public int getPrix() {
+        return super.getPrix();
+    }
+
+    @Override
+    public void utiliser() {
+
     }
 }
