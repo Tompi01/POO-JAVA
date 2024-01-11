@@ -17,8 +17,8 @@ public class HommedeO extends Personnage {
     public void armureDeFlammes(){
         //Armure d'eau soignant le porteur après une attaque donnée
     }
-    public HommedeO(String nom, int pointsDeVie, int force) {
-        super(nom, pointsDeVie, force);
+    public HommedeO(String nom, int pointsDeVie, int force, boolean estMort) {
+        super(nom, pointsDeVie, force, estMort);
     }
 
     @Override

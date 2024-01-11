@@ -5,8 +5,8 @@ public class Joueur extends Personnage {
     String objetsEquipes;
     int argent;
 
-    public Joueur(String nom, int pointsDeVie, int force, int pointDeMana, String objetsEquipes) {
-        super(nom, pointsDeVie, force);
+    public Joueur(String nom, int pointsDeVie, int force, int pointDeMana, String objetsEquipes, boolean estMort) {
+        super(nom, pointsDeVie, force, estMort);
         this.pointDeMana = pointDeMana;
         this.objetsEquipes = objetsEquipes;
     }
@@ -48,4 +48,6 @@ public class Joueur extends Personnage {
     public void fuir(){
 
     }
+
+
 }

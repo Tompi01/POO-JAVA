@@ -1,5 +1,6 @@
 package View;
 
+import Model.Personnage.Joueur;
 import View.Menu.inGameMenu;
 
 import java.util.InputMismatchException;

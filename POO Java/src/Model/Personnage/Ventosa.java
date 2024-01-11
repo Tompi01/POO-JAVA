@@ -18,8 +18,8 @@ public class Ventosa extends Personnage {
         //Armure de vent qui renvoie une partie des dégats reçu d'un montant fixe
     }
 
-    public Ventosa(String nom, int pointsDeVie, int force) {
-        super(nom, pointsDeVie, force);
+    public Ventosa(String nom, int pointsDeVie, int force, boolean estMort) {
+        super(nom, pointsDeVie, force, estMort);
     }
 
     @Override
