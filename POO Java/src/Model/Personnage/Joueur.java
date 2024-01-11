@@ -1,16 +1,12 @@
 package Model.Personnage;
 
-import java.util.ArrayList;
-import java.util.List;
-import Model.Objet.EpeeCourte;
 public class Joueur extends Personnage {
     int pointDeMana;
     String objetsEquipes;
     int argent;
-    EpeeCourte epeeCourte = new EpeeCourte(1, "Epée", "Epée courte");
 
-    public Joueur(String nom, int pointsDeVie, int force, int pointDeMana, String objetsEquipes) {
-        super(nom, pointsDeVie, force);
+    public Joueur(String nom, int pointsDeVie, int force, int pointDeMana, String objetsEquipes, boolean estMort) {
+        super(nom, pointsDeVie, force, estMort);
         this.pointDeMana = pointDeMana;
         this.objetsEquipes = objetsEquipes;
     }
@@ -53,9 +49,5 @@ public class Joueur extends Personnage {
 
     }
 
-    List<Object> inventaire = new ArrayList<>();
 
-    public void inventaire(){
-        inventaire.add(epeeCourte);
-    }
 }

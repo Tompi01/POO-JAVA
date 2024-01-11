@@ -19,8 +19,8 @@ public class Terria extends Personnage {
         //Armure qui augmente la défense ou qui réduit les dégats subis
     }
 
-    public Terria(String nom, int pointsDeVie, int force) {
-        super(nom, pointsDeVie, force);
+    public Terria(String nom, int pointsDeVie, int force, boolean estMort) {
+        super(nom, pointsDeVie, force, estMort);
     }
 
     @Override
