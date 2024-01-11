@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class UIMarchandAchat {
     public static void achatMenu(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Potion de vitalité \r\n 2 - Potion de mana \r\n 3 - Épée en bois \r\n 4 - Bouclier en bois \r\n 5 - Quitter");
+        System.out.println("1 - Potion de vitalité \r\n2 - Potion de mana \r\n3 - Épée en bois \r\n4 - Bouclier en bois \r\n5 - Quitter");
 
         try {
             int response = scanner.nextInt();
