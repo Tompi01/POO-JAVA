@@ -6,6 +6,7 @@ import Model.Personnage.Tristepin;
 import View.Init;
 import View.Menu.JeanCramptéMenu;
 import View.Menu.combat.Attack.magique;
+import View.Menu.madameZaza;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -17,20 +18,21 @@ public class UICombat {
     public static void menu()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Attaques physiques          2 - Attaques magiques \r\n3 - Utiliser un objet           4 - Fuir");
+        System.out.println("1 - Attaques physiques (" + me.getForce() +" dmg)              2 - Attaques magiques \r\n3 - Utiliser un objet                        4 - Fuir");
         try {
             int response = scanner.nextInt();
             switch (response){
                 case 1:
-                    System.out.println("Attaques physiques");
+                    System.out.println("Vous avez lancer une attaque physique");
                     //Là on tape le mec en face
                     JeanCrampté.setPointsDeVie(JeanCrampté.getPointsDeVie()-me.getForce());
                     me.setPointsDeVie(me.getPointsDeVie()-JeanCrampté.getForce());
-                    System.out.println(me.getPointsDeVie());
-                    System.out.println(JeanCrampté.getPointsDeVie());
+                    System.out.println("PV restant du joueur : " + me.getPointsDeVie());
+                    System.out.println("PV restant de JeanCrampté : " + JeanCrampté.getPointsDeVie());
                     if(JeanCrampté.getPointsDeVie()<=0){
                         JeanCrampté.destroyActor("JeanCrampté");
-                        System.out.println("JeanCrampté est mort");
+                        System.out.println("\r\nJeanCrampté est mort\r\n");
+                        madameZaza.menu();
                     }
                     else{
                         UICombat.menu();

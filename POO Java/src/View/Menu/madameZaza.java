@@ -1,27 +1,26 @@
 package View.Menu;
 
-import View.Menu.marchand.UIMarchand;
+import View.Menu.combat.UICombat;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class inGameMenu {
+public class madameZaza {
     public static void menu()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Continuer vers la plaine \r\n2 - Allez voir le marchand \r\n3 - Quitter");
+        System.out.println("1 - Continuer votre chemin vers le labirynthe \r\n2 - Lui demander des écus en échange de votre aide \r\n3 - Retourner vers la plaine");
         try {
             int response = scanner.nextInt();
             switch (response){
                 case 1:
-                    System.out.println("Au loin vous voyez une damoiselle se faire violenter par un chevalier");
-                    plaineMenu.menu();
+                    System.out.println("Jme casse vers le labirynthe");
                     break;
                 case 2:
-                    UIMarchand.marchandMenu();
+                    System.out.println("Merci pour ces magnifique écus d'or");
                     break;
                 case 3:
-                    System.out.println("Quitter");
+                    plaineMenu.menu();
                     break;
                 default:
                     System.out.print("\033[H\033[2J");
@@ -39,5 +38,3 @@ public class inGameMenu {
         }
     }
 }
-
-
