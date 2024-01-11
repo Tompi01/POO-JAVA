@@ -3,7 +3,6 @@ package Model.Personnage;
 public class HommeDeO extends Personnage {
 
     int energieAquatique;
-
     public void attaquer(){
 
     }
