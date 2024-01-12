@@ -1,6 +1,8 @@
 package Model.Objet;
 
-public abstract class Objet {
+import java.io.Serializable;
+
+public abstract class Objet implements Serializable {
     String nom;
     String categorieObjet;
     int prix;

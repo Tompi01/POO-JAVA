@@ -1,6 +1,8 @@
 package Model.Personnage;
 
-public abstract class Personnage {
+import java.io.Serializable;
+
+public abstract class Personnage implements Serializable{
     String nom;
     int pointsDeVie;
     int force;

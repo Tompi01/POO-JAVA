@@ -1,9 +1,14 @@
 package View.Menu;
 
 import Model.Objet.Objet;
+import Model.Personnage.Joueur;
+import View.Init;
 import View.Menu.combat.UICombat;
 import View.Menu.marchand.UIMarchand;
+import Model.Personnage.Personnage;
+import Controler.Save;
 
+import javax.naming.ldap.Control;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -29,6 +34,11 @@ public class ZoneSauvegarde {
                         }
                     }break;
                 case 4:
+                    Controler.Save.saveProgress(UICombat.me.getPointsDeVie(), "PV.txt");
+                    Controler.Save.saveProgress(Joueur.getArgent(), "Argent.txt");
+                    Controler.Save.saveProgress(Init.getClasseStock(), "Classe.txt");
+                    Controler.Save.saveProgressList(Joueur.getInventaire(), "Inventaire.txt");
+                    System.out.println("Progression sauvegardée.");
                     break;
                 default:
                     System.out.print("\033[H\033[2J");

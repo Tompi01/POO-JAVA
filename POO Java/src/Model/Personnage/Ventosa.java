@@ -28,5 +28,4 @@ public class Ventosa extends Personnage {
     public Ventosa(String nom, int pointsDeVie, int force, boolean estMort) {
         super(nom, pointsDeVie, force, estMort);
     }
-
 }
