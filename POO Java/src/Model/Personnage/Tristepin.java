@@ -23,35 +23,6 @@ public class Tristepin extends Personnage {
     }
 
     @Override
-    public void utiliserObjet() {
-
-    }
-
-    @Override
-    public void parlerPNJ() {
-
-    }
-
-    @Override
-    public void acheter() {
-
-    }
-
-    @Override
-    public void vendre() {
-
-    }
-
-    @Override
-    public void interagir() {
-
-    }
-
-    @Override
-    public void debuterLeCombat() {
-
-    }
-    @Override
     public void destroyActor(String actor){
         if(pointsDeVie <= 0){
             actor = null;

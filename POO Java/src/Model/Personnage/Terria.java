@@ -22,34 +22,4 @@ public class Terria extends Personnage {
     public Terria(String nom, int pointsDeVie, int force, boolean estMort) {
         super(nom, pointsDeVie, force, estMort);
     }
-
-    @Override
-    public void utiliserObjet() {
-
-    }
-
-    @Override
-    public void parlerPNJ() {
-
-    }
-
-    @Override
-    public void acheter() {
-
-    }
-
-    @Override
-    public void vendre() {
-
-    }
-
-    @Override
-    public void interagir() {
-
-    }
-
-    @Override
-    public void debuterLeCombat() {
-
-    }
 }

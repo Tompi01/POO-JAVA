@@ -3,10 +3,16 @@ package View;
 import Model.Personnage.Joueur;
 import Model.Personnage.Tristepin;
 
-public class Init {
+import java.io.Serializable;
+
+public class Init implements Serializable{
 
 
     public static String classeStock;
+
+    public static String getClasseStock() {
+        return classeStock;
+    }
 
     public static Joueur initialisation(){
         Tristepin JeanCrampté = new Tristepin("JeanCrampté", 120, 10, false);

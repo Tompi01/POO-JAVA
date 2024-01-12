@@ -1,11 +1,12 @@
 package Model.Personnage;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import Model.Objet.Epee;
-public class Joueur extends Personnage {
+public class Joueur extends Personnage implements Serializable {
     int pointDeMana;
-    String objetsEquipes;
+    static String objetsEquipes;
     static int argent;
 
     public Joueur(String nom, int pointsDeVie, int force, int pointDeMana, String objetsEquipes, boolean estMort,int argent) {
@@ -17,14 +18,18 @@ public class Joueur extends Personnage {
         this.argent = argent;
     }
 
-    public int getArgent() {
+    public static int getArgent() {
         return argent;
+    }
+
+    public static String getObjetsEquipes() {
+        return objetsEquipes;
     }
 
     Epee epee = new Epee("Epée Courte", "Epée", 50,20,"Epée");
 
     static List<Object> inventaire = new ArrayList<>();
-    public  List<Object> getInventaire() {
+    public static List<Object> getInventaire() {
         return inventaire;
     }
 
