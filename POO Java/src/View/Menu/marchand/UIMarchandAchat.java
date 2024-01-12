@@ -8,6 +8,10 @@ import Model.Personnage.Joueur;
 import View.Menu.combat.UICombat;
 
 public class UIMarchandAchat {
+    /**
+     * Méthode affichant le menu d'achat de la boutique
+     * Vérifie si l'achat d'un objet sélectionné est possible et l'ajoute a l'inventaire du joueur si possible
+     */
     public static void achatMenu(){
         Scanner scanner = new Scanner(System.in);
         Boutique boutique = new Boutique();

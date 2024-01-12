@@ -13,10 +13,17 @@ import java.util.Scanner;
 public class UICombat {
 
 
-
     public static Joueur me = Init.initialisation();
-    static Tristepin JeanCrampté = new Tristepin("JeanCrampté", 120, 10 + (int)(Math.random() * ((20 - 10) + 1)), false);
 
+    static Tristepin JeanCrampté = new Tristepin("JeanCrampté", 120, 10 + (int)(Math.random() * ((20 - 10) + 1)), false);
+    /**
+     * Affiche un menu de combat et permet au joueur de choisir une action.
+     * Les actions possibles sont :
+     * 1 - Attaques physiques (dégâts = `me.getForce()` valeur de force du joueur ou de l'ennemi)
+     * 2 - Attaques magiques
+     * 3 - Utiliser un objet
+     * 4 - Fuir
+     */
     public static void menu()
     {
         Scanner scanner = new Scanner(System.in);
@@ -27,7 +34,6 @@ public class UICombat {
             switch (response){
                 case 1:
                     System.out.println("Vous avez lancer une attaque physique");
-                    //Là on tape le mec en face
                     JeanCrampté.setPointsDeVie(JeanCrampté.getPointsDeVie()-me.getForce());
                     me.setPointsDeVie(me.getPointsDeVie()-JeanCrampté.getForce());
                     System.out.println("PV restant du joueur : " + me.getPointsDeVie());

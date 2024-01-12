@@ -8,6 +8,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UICombatItem {
+    /**
+     * Affiche le menu de l'inventaire et permet à l'utilisateur de choisir une option.
+     */
     public static void menu()
     {
         Scanner scanner = new Scanner(System.in);

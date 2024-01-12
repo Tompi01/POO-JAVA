@@ -8,6 +8,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ZoneSauvegarde {
+    /** Le menu affiche quatre options et redirige en fonction de l'entrée de l'utilisateur */
     public static void menu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Vous arrivez devant un immense labyrinthe! Que voulez vous faire? \r\n1 - Entrez dans le labyrinthe \r\n2 - Allez voir le marchand du labyrinthe \r\n3 - Ouvrir l'invetaire \r\n 4 - Vous reposez (Sauvegarder et quitter)");
@@ -37,6 +38,7 @@ public class ZoneSauvegarde {
                     break;
             }
         } catch (InputMismatchException e) {
+            /** *Si l’utilisateur entre autre chose, la méthode affiche “Invalide” avant d’appeler la méthode menu*/
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("Entrée invalide");

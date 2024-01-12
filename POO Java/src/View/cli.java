@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class cli {
 
     public static void startMenu()
+            /** startMenu affiche un menu avec deux options: “Jouer” et “Quitter”.*/
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("1 - Jouer \r\n2 - Quitter");
@@ -32,6 +33,7 @@ public class cli {
             }
         } catch (InputMismatchException e)
         {
+            /** *Si l’utilisateur entre autre chose, la méthode affiche “Invalide” avant d’appeler la méthode menu*/
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("Entrée invalide");

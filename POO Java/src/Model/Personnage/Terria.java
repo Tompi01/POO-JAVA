@@ -4,18 +4,25 @@ public class Terria extends Personnage {
 
     int energieTerrestre;
 
+    /**
+     * Méthode pour permettre aux ennemis nommé issus de cette classe d'attaquer
+     * Pas encore définie
+     */
     public void attaquer(){
 
     }
-
-    public void defendre(){
-
-    }
-
+    /**
+     * Méthode pour utiliser la compétence cracherDuFeu
+     * Pas encore définie
+     */
     public void lanceDeLaTerre(){
-
+    //Inflige des dégats élevés au joueur et baisse sa défense
     }
-    public void armureDeFlammes(){
+    /**
+     * Méthode pour utiliser la compétence Armure de flammpe
+     * Pas encore définie
+     */
+    public void armureDeTerre(){
         //Armure qui augmente la défense ou qui réduit les dégats subis
     }
 
@@ -23,33 +30,4 @@ public class Terria extends Personnage {
         super(nom, pointsDeVie, force, estMort);
     }
 
-    @Override
-    public void utiliserObjet() {
-
-    }
-
-    @Override
-    public void parlerPNJ() {
-
-    }
-
-    @Override
-    public void acheter() {
-
-    }
-
-    @Override
-    public void vendre() {
-
-    }
-
-    @Override
-    public void interagir() {
-
-    }
-
-    @Override
-    public void debuterLeCombat() {
-
-    }
 }

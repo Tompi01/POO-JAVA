@@ -29,9 +29,12 @@ public abstract class Personnage {
 
     public void setForce(int force) {
         this.force = force;
-        force = 20;
     }
 
+    /**
+     * Méthode pour permettre au joueur et aux ennemis nommé d'attaquer
+     * Pas encore définie
+     */
     public abstract void attaquer();
 
     public int getPointsDeVie() {
@@ -49,6 +52,11 @@ public abstract class Personnage {
     public int getForce() {
         return force;
     }
+
+    /**
+     * Méthode qui détruit le personnage mis en paramètres
+     * @param actor personnage à détruire
+     */
     public void destroyActor(String actor){
         if(pointsDeVie <= 0){
             setEstMort(true);
