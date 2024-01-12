@@ -1,29 +1,23 @@
 package View.Menu;
 
-import View.Menu.combat.UICombat;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class madameZaza {
-    public static void menu()
-    {
+public class ZoneSauvegarde {
+    public static void menu() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Continuer votre chemin vers le labirynthe \r\n2 - Lui demander des écus en échange de votre aide \r\n3 - Retourner vers la plaine");
+        System.out.println("Vous arrivez devant un immense labyrinthe! Que voulez vous faire? \r\n1 - Entrez dans le labyrinthe \r\n2 - Allez voir le marchand du labyrinthe \r\n3 - Vous reposez (Sauvegarder et quitter)");
         try {
             int response = scanner.nextInt();
-            switch (response){
+            switch (response) {
                 case 1:
-                    System.out.println("Jme casse vers le labirynthe");
-                    ZoneSauvegarde.menu();
+                    System.out.println("Quitter");
                     break;
                 case 2:
-                    System.out.println("Merci pour ces magnifique écus d'or");
-                    ZoneSauvegarde.menu();
-                    
+                    System.out.println("Quitter");
                     break;
                 case 3:
-                    plaineMenu.menu();
+                    System.out.println("Quitter");
                     break;
                 default:
                     System.out.print("\033[H\033[2J");
@@ -32,8 +26,7 @@ public class madameZaza {
                     menu();
                     break;
             }
-        } catch (InputMismatchException e)
-        {
+        } catch (InputMismatchException e) {
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("Entrée invalide");
