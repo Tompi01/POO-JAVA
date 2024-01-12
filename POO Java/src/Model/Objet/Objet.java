@@ -22,4 +22,12 @@ public abstract class Objet {
     }
 
     public abstract void utiliser();
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 }

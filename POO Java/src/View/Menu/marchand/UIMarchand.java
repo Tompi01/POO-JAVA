@@ -1,6 +1,8 @@
 package View.Menu.marchand;
 
 import View.Dialogue;
+import View.Menu.ZoneSauvegarde;
+import View.Menu.combat.UICombat;
 import View.Menu.inGameMenu;
 
 import java.util.InputMismatchException;
@@ -22,7 +24,7 @@ public class UIMarchand {
                     break;
                 case 3:
                     System.out.println("Vous sortez de la boutique");
-                    inGameMenu.menu();
+                    UICombat.menu();
                     break;
                 default:
                     System.out.print("\033[H\033[2J");

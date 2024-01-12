@@ -16,19 +16,19 @@ public class personnageSelector {
                 case 1:
                     Init.classeStock = "tank";
                     System.out.println("Vous avez choisi le tank\r\n");
-                    System.out.println("Vous arrivez près d'une étrange boutique");
+                    System.out.println("Vous arrivez devant une grande plaine et vous entendez un cri au loin");
                     inGameMenu.menu();
                 case 2:
 
                     Init.classeStock = "combattant";
                     System.out.println("Vous avez choisi le combattant\r\n");
-                    System.out.println("Vous arrivez près d'une étrange boutique");
+                    System.out.println("Vous arrivez devant une grande plaine et vous entendez un cri au loi");
                     inGameMenu.menu();
                 case 3:
 
                     Init.classeStock = "assassin";
                     System.out.println("Vous avez choisi l'assasin\r\n");
-                    System.out.println("Vous arrivez près d'une étrange boutique");
+                    System.out.println("Vous arrivez devant une grande plaine et vous entendez un cri au loi");
                     inGameMenu.menu();
                 case 4:
                     System.out.println("Quitter");

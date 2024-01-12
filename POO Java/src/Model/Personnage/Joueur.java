@@ -8,15 +8,16 @@ public class Joueur extends Personnage {
     String objetsEquipes;
     static int argent;
 
-    public Joueur(String nom, int pointsDeVie, int force, int pointDeMana, String objetsEquipes, boolean estMort) {
+    public Joueur(String nom, int pointsDeVie, int force, int pointDeMana, String objetsEquipes, boolean estMort,int argent) {
         super(nom, pointsDeVie, force, estMort);
+        this.argent=argent;
     }
 
     public void setArgent(int argent) {
         this.argent = argent;
     }
 
-    public static int getArgent() {
+    public int getArgent() {
         return argent;
     }
 
@@ -75,6 +76,14 @@ public class Joueur extends Personnage {
 
     public static void addInventaire(Object objet){
             inventaire.add(objet);
+    }
+
+    public void modifierInventaire(Object objet, int index){
+        inventaire.set(index,objet);
+    }
+
+    public  List<Object> getInventaire() {
+        return inventaire;
     }
 }
 

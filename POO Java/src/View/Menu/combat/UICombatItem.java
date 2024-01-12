@@ -1,5 +1,6 @@
 package View.Menu.combat;
 
+import Model.Objet.Objet;
 import View.Menu.inGameMenu;
 import View.Menu.plaineMenu;
 
@@ -10,20 +11,27 @@ public class UICombatItem {
     public static void menu()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Aller voir ce qu'il se passe là bas \r\n2 - Ne rien faire \r\n3 - Revenir près du marchand");
+        int bouttonQuitter = 0;
+        for(int i = 0; i < UICombat.me.getInventaire().size(); i++) {
+            Object x = UICombat.me.getInventaire().get(i);
+            if (x instanceof Objet n){
+                System.out.println(i+1 + " - " + ((Objet) x).getNom() +"("+ n.getPrix() +"po) \r\n");
+
+            }
+            bouttonQuitter = i+2;
+        }
+        System.out.println(bouttonQuitter + " - Quitter");
         try {
             int response = scanner.nextInt();
             switch (response){
                 case 1:
-                    System.out.println("Vous arrivez devant JeanCrampté. Madame Zaza vous supplie de l'aider");
-
+                    UICombat.menu();
                     break;
                 case 2:
-                    plaineMenu.menu();
+                    UICombat.menu();
                     break;
                 case 3:
-                    System.out.println("Quitter");
-                    inGameMenu.menu();
+                    UICombat.menu();
                     break;
                 default:
                     System.out.print("\033[H\033[2J");

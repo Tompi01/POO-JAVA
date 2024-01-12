@@ -14,7 +14,7 @@ public class UICombat {
 
 
 
-    static Joueur me = Init.initialisation();
+    public static Joueur me = Init.initialisation();
     static Tristepin JeanCrampté = new Tristepin("JeanCrampté", 120, 10 + (int)(Math.random() * ((20 - 10) + 1)), false);
 
     public static void menu()
@@ -35,9 +35,12 @@ public class UICombat {
                     if(JeanCrampté.getPointsDeVie()<=0){
                         JeanCrampté.destroyActor("JeanCrampté");
                         System.out.println("\r\nJeanCrampté est mort\r\n");
+                        me.setArgent(me.getArgent()+50);
                         madameZaza.menu();
-                    }
-                    else{
+                    } else if (me.getPointsDeVie()<=0) {
+                        System.out.println("Vous avez Perdu");
+                        break;
+                    } else{
                         UICombat.menu();
                     }
                     break;

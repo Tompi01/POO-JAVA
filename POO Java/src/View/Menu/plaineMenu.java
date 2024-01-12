@@ -9,7 +9,7 @@ public class plaineMenu {
     public static void menu()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 - Aller voir ce qu'il se passe là bas \r\n2 - Ne rien faire \r\n3 - Revenir près du marchand");
+        System.out.println("1 - Aller lui porter secours \r\n2 - Ne rien faire \r\n3 - Revenir près du marchand");
         try {
             int response = scanner.nextInt();
             switch (response){
