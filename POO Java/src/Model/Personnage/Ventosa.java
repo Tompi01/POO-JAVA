@@ -15,9 +15,17 @@ public class Ventosa extends Personnage {
 
     }
     public void armureDeFlammes(){
-        //Armure de vent qui renvoie une partie des dégats reçu d'un montant fixe
+        /* Commentaire sur un block*/
+        //Commentaire sur une ligne
     }
 
+    /**
+     *
+     * @param nom
+     * @param pointsDeVie
+     * @param force
+     * @param estMort
+     */
     public Ventosa(String nom, int pointsDeVie, int force, boolean estMort) {
         super(nom, pointsDeVie, force, estMort);
     }

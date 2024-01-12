@@ -17,4 +17,13 @@ public class PotionDeVie extends Potion{
     public int getPrix() {
         return super.getPrix();
     }
+
+    /**
+     * Méthode pour utiliser la potions de vie
+     * Rends un nombre de points de vie fixe
+     * Pas encore définie
+     */
+    @Override
+    public void utiliser() {
+    }
 }

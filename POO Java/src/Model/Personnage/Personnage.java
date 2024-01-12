@@ -1,8 +1,6 @@
 package Model.Personnage;
 
-import Model.Interaction.Interactable;
-
-public abstract class Personnage implements Interactable {
+public abstract class Personnage {
     String nom;
     int pointsDeVie;
     int force;

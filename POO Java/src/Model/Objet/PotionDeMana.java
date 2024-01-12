@@ -17,4 +17,14 @@ public class PotionDeMana extends Potion {
     public int getPrix() {
         return super.getPrix();
     }
+
+    /**
+     * Méthode pour utiliser la potions de mana
+     * Rends un nombre de points de mana fixe
+     * Pas encore définie
+     */
+    @Override
+    public void utiliser() {
+
+    }
 }

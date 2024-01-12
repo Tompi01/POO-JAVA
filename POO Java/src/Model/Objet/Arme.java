@@ -10,6 +10,10 @@ public class Arme extends Objet {
         this.typeDarme = typeDarme;
     }
 
+    /**
+     * Méthode héritée de la classe mère "Objet"
+     * Non utilisé actuellement pour les armes
+     */
     @Override
     public void utiliser() {
 

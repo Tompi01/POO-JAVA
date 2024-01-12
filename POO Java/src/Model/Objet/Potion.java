@@ -16,6 +16,9 @@ public class Potion extends Objet{
         return super.getPrix();
     }
 
+    /**
+     * Méthode pour utiliser les potions
+     */
     @Override
     public void utiliser() {
 
