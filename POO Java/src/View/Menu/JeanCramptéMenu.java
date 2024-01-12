@@ -6,6 +6,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class JeanCramptéMenu {
+    /** Le menu affiche trois options et redirige en fonction de l'entrée de l'utilisateur*/
     public static void menu()
     {
         Scanner scanner = new Scanner(System.in);

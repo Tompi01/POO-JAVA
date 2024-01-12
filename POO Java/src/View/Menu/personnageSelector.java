@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class personnageSelector {
     public static void menu()
     {
+        /** Le menu affiche quatre options et redirige en fonction de l'entrée de l'utilisateur */
         Scanner scanner = new Scanner(System.in);
         System.out.println("1 - Le tank (Beaucoup de PV mais peu de dégats) \r\n2 - Le combattant (Dégats et PV moyen) \r\n3 - L'assasin (Beaucoup de dégats mais peu de PV) \r\n4 - Quitter");
         try {
@@ -41,6 +42,7 @@ public class personnageSelector {
                     break;
             }
         } catch (InputMismatchException e)
+        /** *Si l’utilisateur entre autre chose, la méthode affiche “Invalide” avant d’appeler la méthode menu*/
         {
             System.out.print("\033[H\033[2J");
             System.out.flush();

@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class plaineMenu {
     public static void menu()
     {
+        /** Le menu affiche trois options et redirige en fonction de l'entrée de l'utilisateur */
         Scanner scanner = new Scanner(System.in);
         System.out.println("1 - Aller lui porter secours \r\n2 - Ne rien faire \r\n3 - Revenir près du marchand");
         try {
@@ -32,6 +33,7 @@ public class plaineMenu {
                     break;
             }
         } catch (InputMismatchException e)
+        /** *Si l’utilisateur entre autre chose, la méthode affiche “Invalide” avant d’appeler la méthode menu*/
         {
             System.out.print("\033[H\033[2J");
             System.out.flush();

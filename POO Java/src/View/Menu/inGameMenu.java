@@ -8,6 +8,9 @@ import java.util.Scanner;
 public class inGameMenu {
     public static void menu()
     {
+        /** La méthode scanner est utiliser pour  lire l’entrée de l’utilisateur et exécute une action en fonction de l’entrée de l’utilisateur
+         *
+         */
         Scanner scanner = new Scanner(System.in);
         System.out.println("1 - Se diriger vers l'origine du cri \r\n2 - Quitter");
         try {

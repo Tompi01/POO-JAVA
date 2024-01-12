@@ -46,15 +46,27 @@ public class Joueur extends Personnage implements Serializable {
     public void attaquer(){
 
     }
+
+    /**
+     * Méthode qui nous fait retourner a la zone safe précédente la plus proche
+     * Non utilisable contre les boss
+     * Pas encore définie
+     */
     public void fuir(){
 
     }
 
-
+    /**
+     * Ajoute l'épée de départ au joueur lorsqu'il est initialisé
+     */
     public void setInventaireDepart(){
         inventaire.add(epee);
     }
 
+    /**
+     * Méthode qui ajoute un objet a l'inventaire du joueur
+     * @param objet objet à ajouter a l'inventaire
+     */
     public static void addInventaire(Object objet){
             inventaire.add(objet);
     }

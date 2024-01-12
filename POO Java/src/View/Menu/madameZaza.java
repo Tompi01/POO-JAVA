@@ -6,6 +6,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class madameZaza {
+    /** Le menu affiche trois options et redirige en fonction de l'entrée de l'utilisateur */
     public static void menu()
     {
         Scanner scanner = new Scanner(System.in);
@@ -32,6 +33,7 @@ public class madameZaza {
                     menu();
                     break;
             }
+            /** *Si l’utilisateur entre autre chose, la méthode affiche “Invalide” avant d’appeler la méthode menu.*/
         } catch (InputMismatchException e)
         {
             System.out.print("\033[H\033[2J");
